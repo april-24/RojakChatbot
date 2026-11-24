@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#183a32">
+  <title>Rojak Wardrobe — Women's Malaysian Wear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="announcement">Modern Malaysian style · Ask us in English, BM or Rojak</div>
+  <header class="site-header">
+    <button class="brand" data-page="home" aria-label="Rojak Wardrobe home"><img class="brand-logo" src="/assets/logo.png" alt="" onerror="this.style.display='none'"> ROJAK <em>WARDROBE</em></button>
+    <nav aria-label="Main navigation"><button data-page="home" class="nav-active">Shop</button><button data-page="orders">My Orders</button><button data-page="story">Our Story</button></nav>
+    <div class="header-actions"><span class="account">◉ <span>Aina</span></span><button class="support-link" id="header-support">Chat with us <span aria-hidden="true">↗</span></button></div>
+  </header>
+
+  <main>
+    <section id="home-page" class="page active">
+      <div class="hero"><div class="hero-copy"><div class="kicker">THE MODERN HERITAGE EDIT</div><h1>Tradition that<br><i>feels like you.</i></h1><p>Modern Baju Kurung and kurta styles for every gathering. Browse our women's collection, then ask us about fabric, colour and finish.</p><button class="hero-button" id="hero-shop">Explore the collection</button><div class="hero-foot">Curated for everyday confidence <span>✦</span> Inspired by Malaysian style</div></div><div class="hero-art"><div class="hero-circle"></div><div class="garment hero-garment" id="hero-garment"></div><div class="hero-stamp">THE<br>ROJAK<br>EDIT <span>✳</span></div></div></div>
+      <div class="value-strip"><div><b>01</b><strong>Real review insights</strong><span>See what shoppers actually said</span></div><div><b>02</b><strong>Ask your way</strong><span>English, BM or both together</span></div><div><b>03</b><strong>Here to help</strong><span>Chat about products or orders</span></div></div>
+      <section class="collection" id="collection"><div class="section-heading"><div><div class="kicker">DISCOVER THE COLLECTION</div><h2>Made for the moment.</h2></div><p>Explore easygoing styles and ask us about fit, fabric, colour or finish.</p></div><div class="product-grid" id="product-grid"></div></section>
+      <section class="question-band"><div><span class="kicker">NEED A SECOND OPINION?</span><h2>Ask about the details.</h2><p>“Saiz dia accurate ke?” or “Is the kain panas?” Our assistant checks the customer reviews and shows the evidence.</p></div><button id="band-support">Open customer support</button></section>
+    </section>
+
+    <section id="orders-page" class="page inner-page"><div class="inner-top"><div><div class="kicker">YOUR ACCOUNT</div><h1>My Orders</h1><p>Track your purchases and get help whenever you need it.</p></div><button class="text-back" data-page="home">Back to shop</button></div><div class="orders-list" id="orders-list"></div></section>
+    <section id="order-page" class="page inner-page"><div class="inner-top"><div><div class="kicker">ORDER DETAILS</div><h1 id="order-title">Your order</h1><p>Review your simulated purchase and ask us about it.</p></div><button class="text-back" data-page="orders">Back to orders</button></div><div id="order-detail"></div></section>
+    <section id="story-page" class="page inner-page"><div class="inner-top"><div><div class="kicker">OUR STORY</div><h1>Style, with context.</h1></div><button class="text-back" data-page="home">Back to shop</button></div><div class="story-card"><h2>A shop built around honest answers.</h2><p>Rojak Wardrobe brings Baju Kurung and women's kurta styles together with helpful customer conversations. Ask our assistant about fabric, colour, quality or delivery; it will show the customer reviews behind its answer.</p><p>We believe shopping should feel simple, welcoming and natural—whether you ask in English, Bahasa Melayu or a little of both.</p><button class="primary" id="story-support">Talk to our assistant</button></div></section>
+  </main>
+
+  <footer><div class="footer-brand">ROJAK <em>WARDROBE</em></div><p>Modern Malaysian style. Honest review-backed answers.</p><span>Made for your moments</span></footer>
+
+  <button class="floating-chat" id="floating-chat" aria-label="Open customer support">💬 <span>Need help?</span></button>
+  <section class="chat-panel" id="chat-panel" aria-label="Customer support chat" aria-hidden="true">
+    <div class="chat-head"><button id="chat-back" class="chat-back" aria-label="Close chat">‹</button><div class="chat-avatar">✳</div><div class="chat-identity"><strong>Rojak Assistant</strong><span><i></i> Here to help you</span></div><button id="chat-close" class="chat-close" aria-label="Close chat">×</button></div>
+    <div class="chat-messages" id="chat-messages" role="log" aria-live="polite"></div>
+    <div class="chat-attachment" id="chat-attachment" hidden></div>
+    <div class="voice-preview" id="voice-preview" hidden>
+      <div class="voice-top"><div class="voice-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><strong id="voice-status">Listening…</strong><button id="voice-discard" type="button" aria-label="Discard voice recording">×</button></div>
+      <p id="voice-transcript" aria-live="polite">Speak now. Your words will appear here.</p>
+      <audio id="voice-playback" controls hidden aria-label="Play back your recorded voice"></audio>
+      <button id="voice-use-text" type="button" hidden>Use transcript in message</button>
+    </div>
+    <div class="chat-tools"><button id="voice-button" title="Speak a question" aria-label="Speak a question">🎙</button><input id="chat-input" type="text" maxlength="1000" placeholder="Ask in English, BM or Rojak…" aria-label="Your message"><button id="send-button" aria-label="Send message">Send</button></div>
+    <div class="chat-disclaimer">Product answers are based on customer reviews.</div>
+  </section>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
